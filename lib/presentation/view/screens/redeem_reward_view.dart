@@ -77,17 +77,33 @@ class RedeemRewardViewBody extends StatelessWidget {
             CustomAppButton(
               btnText: 'Redeem',
               onPressed: () {
-                showDialog(
-                  context: context,
-                  builder: (_) => RedeemAlertDialog(
-                    rewardName: reward.name,
-                    points: reward.cost,
-                    onConfirmed: () {
-                      Navigator.of(context, rootNavigator: true).pop(); 
-                      context.read<PointsCubit>().expensePoints(reward.cost);
-                    },
-                  ),
-                );
+                final state = context.read<PointsCubit>().state;
+                if (state is PointsUpdated) {
+                  if (state.totalPoints >= reward.cost) {
+                    showDialog(
+                      context: context,
+                      builder:
+                          (context) => RedeemAlertDialog(
+                            rewardName: reward.name,
+                            points: reward.cost,
+                            onConfirmed: () {
+                              context.pop();
+                              context.read<PointsCubit>().expensePoints(
+                                reward.cost,
+                              );
+                            },
+                          ),
+                    );
+                  } else {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text(
+                          "You don't have enough points to redeem this reward.",
+                        ),
+                      ),
+                    );
+                  }
+                }
               },
             ),
           ],
