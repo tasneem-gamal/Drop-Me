@@ -1,3 +1,4 @@
+import 'package:dropme/presentation/view/screens/onboarding_view.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
@@ -19,7 +20,7 @@ class DropMe extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white
       ),
       themeMode: ThemeMode.light,
-      //home: ,
+      home: OnboardingView(),
     );
   }
 }
