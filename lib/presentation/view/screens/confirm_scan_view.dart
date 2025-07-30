@@ -26,31 +26,34 @@ class ConfirmScanViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: Constants.appPadding,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset('assets/images/machine_icon.png', width: 300, height: 300,),
-          verticalSpace(context, 16),
-          Text(
-            "You're now connected to this RVM.",
-            textAlign: TextAlign.center,
-            style: CustomTextStyles.font18MainColorMedium(context),
-          ),
-          verticalSpace(context, 16),
-          MachineInfo(
-            title: 'Branch: ',
-            subTitle: 'Maadi',
-          ),
-          MachineInfo(
-            title: 'ٌRVM ID: ', 
-            subTitle: 'RVM-178'
-          ),
-          verticalSpace(context, 24),
-          CustomAppButton(
-            btnText: 'Deposit',
-            onPressed: (){},
-          )
-        ],
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset('assets/images/machine_icon.png', width: 300, height: 300,),
+            verticalSpace(context, 16),
+            Text(
+              "You're now connected to this RVM.",
+              textAlign: TextAlign.center,
+              style: CustomTextStyles.font18MainColorMedium(context),
+            ),
+            verticalSpace(context, 16),
+            MachineInfo(
+              title: 'Branch: ',
+              subTitle: 'Maadi',
+            ),
+            MachineInfo(
+              title: 'ٌRVM ID: ', 
+              subTitle: 'RVM-178'
+            ),
+            verticalSpace(context, 24),
+            CustomAppButton(
+              btnText: 'Deposit',
+              onPressed: (){},
+              buttonWidth: MediaQuery.of(context).size.width * 0.5,
+            )
+          ],
+        ),
       ),
     );
   }

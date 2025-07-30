@@ -23,7 +23,7 @@ class CustomAppButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: buttonWidth ?? double.infinity,
-      height: buttonHeight,
+      height: buttonHeight ,
       child: TextButton(
         onPressed: onPressed,
         style: TextButton.styleFrom(
@@ -33,7 +33,7 @@ class CustomAppButton extends StatelessWidget {
           ),
           padding: const EdgeInsets.all(16),
         ),
-        child: Text(btnText, style: textStyle ?? CustomTextStyles.font24WhiteMedium(context)),
+        child: Text(btnText, style: textStyle ?? CustomTextStyles.font18WhiteMedium(context)),
       ),
     );
   }
