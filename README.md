@@ -65,6 +65,7 @@ lib/
 
 
 # 📸 Screenshots
+<img width="1080" height="2400" alt="Screenshot_1753894022" src="https://github.com/user-attachments/assets/5c8b42db-30fa-4313-bc49-a46f4618294e" />
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/9dae814c-feb4-4053-9511-4d4d0ad7d81a" width="45%" />
