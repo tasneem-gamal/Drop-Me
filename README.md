@@ -65,54 +65,7 @@ lib/
 
 
 # 📸 Screenshots
-<center>
-  <p float="left">
-  <img src="https://github.com/user-attachments/assets/9dae814c-feb4-4053-9511-4d4d0ad7d81a" width="300" height="616"> 
-<img src="https://github.com/tasneem-gamal/Guidely/assets/156458349/cb48d303-aa38-412c-ae3e-87ce56ceca1c" width="300" height="616">
-</p>
-<p float="left">
-<img src="https://github.com/tasneem-gamal/Guidely/assets/156458349/d8a1f7c9-4938-442d-abb0-ae88d09655f7" width="300" height="616">
-<img src="https://github.com/tasneem-gamal/Guidely/assets/156458349/69af7c5b-a005-407e-b61b-b0b990974e26" width="300" height="616">
-</p>
-<p float="left">
-<img src="https://github.com/tasneem-gamal/Guidely/assets/156458349/e8b52f19-56f6-429c-b896-1180345eeb1e" width="300" height="616">
-<img src="https://github.com/tasneem-gamal/Guidely/assets/156458349/b4d64769-b007-4b6d-8cfd-037b98997dc4" width="300" height="616">
-</p>
-<p float="left">
-<img src="https://github.com/tasneem-gamal/Guidely/assets/156458349/c2ae17b1-25ee-47ba-a8fb-326aa3547478" width="300" height="616">
-<img src="https://github.com/tasneem-gamal/Guidely/assets/156458349/09811fde-f006-4298-a098-66dbf9dab38d" width="300" height="616">
-</p>
-</center>
-
-<p align="center">
-  <img src="" width="45%" />
-  <img src="https://github.com/user-attachments/assets/e0950834-aaed-419b-a903-990e744fc7ad" width="45%" />
-</p>
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/755a0574-dbc8-45ad-a7d0-ed12cc91807d" width="45%" />
-  <img src="https://github.com/user-attachments/assets/35f11ab4-8513-4655-9b6a-3314150036f9" width="45%" />
-</p>
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/a9cf6853-ebeb-41d9-bb1d-107d73362519" width="45%" />
-  <img src="https://github.com/user-attachments/assets/53a4933d-a2e1-4c63-96cd-1567bace8e9a" width="45%" />
-</p>
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/1769959d-2147-4783-9038-f35fce03e142" width="45%" />
-  <img src="https://github.com/user-attachments/assets/62fdf87e-84c8-408a-8392-dec46caef8a2" width="45%" />
-</p>
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/f3aaf0de-2f31-4246-a3b0-a2ddebc0bc6b" width="45%" />
-  <img src="https://github.com/user-attachments/assets/65a18e38-df14-409d-93f0-5624fd46a3e5" width="45%" />
-</p>
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/99b93588-811b-4815-9fda-97969a2c37e7" width="45%" />
-  <img src="https://github.com/user-attachments/assets/0c71d1b9-a58e-4ecb-9e05-b8063f5cae53" width="45%" />
-</p>
+<img width="1080" height="2400" alt="Screenshot_1753894008" src="https://github.com/user-attachments/assets/fea06f5e-7661-4b50-9add-2bb3cb2c8066" />
 
 
 
