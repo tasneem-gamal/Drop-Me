@@ -8,58 +8,58 @@ This Flutter application enables users to:
 
 
 # 🧩 System Design
+- **lib/**
+  - **core/**
+    - **di/**: Dependency Injection
+    - **utils/**
+      - `constants.dart`: App constants
+      - `extentions.dart`: Navigation extensions
+      - `shared_preference_helper.dart`: Shared preferences handler
+      - `spacing.dart`: Handle spacing
+    - **theming/**
+      - `colors.dart`: App color palette
+      - `font_weight_helper.dart`: Font weights
+      - `styles.dart`: Text styles
+    - **widgets/**
+      - `custom_app_button.dart`: Reusable custom button
 
-lib/
-├── core/
-│   ├── di/
-│   │   └── dependency injection 
-│   ├── utils/
-│   │   ├── constants.dart
-│   │   ├── extentions.dart
-│   │   ├── shared_preference_helper.dart
-│   │   └── spacing.dart
-│   ├── theming/
-│   │   ├── colors.dart
-│   │   ├── font_weight_helper.dart
-│   │   └── styles.dart
-│   └── widgets/
-│       └── custom_app_button.dart
-├── Data/
-│   ├── data_source/
-│   │   └── reward_service.dart
-│   └── models/
-│       └── reward_model.dart
-├── presentation/
-│   ├── controllers/
-│   │   ├── onboarding_controller.dart
-│   │   ├── rewards/
-│   │   │   ├── rewards_state.dart
-│   │   │   └── rewards_cubit.dart
-│   │   └── points/
-│   │       ├── points_state.dart
-│   │       └── points_cubit.dart
-│   └── view/
-│       ├── screens/
-│       │   ├── confirm_scan_view.dart
-│       │   ├── onboarding_view.dart
-│       │   ├── qr_view.dart
-│       │   ├── redeem_reward_view.dart
-│       │   └── rewards_view.dart
-│       └── widgets/
-│           ├── custom_bottom_nav_bar.dart
-│           ├── machine_info.dart
-│           ├── onboarding_next_button.dart
-│           ├── onboarding_page.dart
-│           ├── onboarding_skip_button.dart
-│           ├── redeem_alert_dialog.dart
-│           ├── reward_icon.dart
-│           ├── reward_item_list.dart
-│           ├── reward_item.dart
-│           ├── rewards_bloc_builder.dart
-│           └── total_points_container.dart
-├── drop_me.dart
-└── main.dart
+  - **Data/**
+    - **data_source/**
+      - `reward_service.dart`: Fetch reward data
+    - **models/**
+      - `reward_model.dart`: Reward model
 
+  - **presentation/**
+    - **controllers/**
+      - `onboarding_controller.dart`: Manages onboarding logic
+      - **rewards/**
+        - `rewards_state.dart`
+        - `rewards_cubit.dart`
+      - **points/**
+        - `points_state.dart`: Manages user points
+        - `points_cubit.dart`
+    - **view/**
+      - **screens/**
+        - `confirm_scan_view.dart`
+        - `onboarding_view.dart`
+        - `qr_view.dart`
+        - `redeem_reward_view.dart`
+        - `rewards_view.dart`
+      - **widgets/**
+        - `custom_bottom_nav_bar.dart`
+        - `machine_info.dart`
+        - `onboarding_next_button.dart`
+        - `onboarding_page.dart`
+        - `onboarding_skip_button.dart`
+        - `redeem_alert_dialog.dart`
+        - `reward_icon.dart`
+        - `reward_item_list.dart`
+        - `reward_item.dart`
+        - `rewards_bloc_builder.dart`
+        - `total_points_container.dart`
+
+  - `drop_me.dart`
+  - `main.dart`
 
 # Demo
 
