@@ -5,67 +5,63 @@ This Flutter application enables users to:
  - Redeem rewards using accumulated points through a confirmation dialog and secure transaction logic.
  - Persist points locally using SharedPreferences so users don’t lose their points after restarting the app.
 
-# System Architecture
-```bash
+
+
+# 🧩 System Design
+
 lib/
 ├── core/
 │   ├── di/
 │   │   └── dependency injection 
 │   ├── utils/
-│   │   ├── constants.dart                # app constants
-│   │   ├── extentions.dart               # for navigation
-│   │   ├── shared_preference_helper.dart # shared preference
-│   │   └── spacing.dart                  # handle spacing
+│   │   ├── constants.dart
+│   │   ├── extentions.dart
+│   │   ├── shared_preference_helper.dart
+│   │   └── spacing.dart
 │   ├── theming/
-│   │   ├── colors.dart                   # constants colors
-│   │   ├── font_weight_helper.dart       # typography weights
-│   │   └── styles.dart                   # text styles
+│   │   ├── colors.dart
+│   │   ├── font_weight_helper.dart
+│   │   └── styles.dart
 │   └── widgets/
-│       └── custom_app_button.dart        # custom button component
+│       └── custom_app_button.dart
 ├── Data/
 │   ├── data_source/
-│   │   └── reward_service.dart           # get reward data
+│   │   └── reward_service.dart
 │   └── models/
-│       └── reward_model.dart             # reward model
+│       └── reward_model.dart
 ├── presentation/
 │   ├── controllers/
-│   │   ├── onboarding_controller.dart    
+│   │   ├── onboarding_controller.dart
 │   │   ├── rewards/
-│   │   │   ├── rewards_state.dart        
-│   │   │   └── rewards_cubit.dart        
+│   │   │   ├── rewards_state.dart
+│   │   │   └── rewards_cubit.dart
 │   │   └── points/
-│   │       ├── points_state.dart         # handle user points 
-│   │       └── points_cubit.dart    
+│   │       ├── points_state.dart
+│   │       └── points_cubit.dart
 │   └── view/
 │       ├── screens/
-│       │   ├── confirm_scan_view.dart   
-│       │   ├── onboarding_view.dart      
-│       │   ├── qr_view.dart      
-│       │   ├── redeem_reward_view.dart      
-│       │   └── rewards_view.dart  
+│       │   ├── confirm_scan_view.dart
+│       │   ├── onboarding_view.dart
+│       │   ├── qr_view.dart
+│       │   ├── redeem_reward_view.dart
+│       │   └── rewards_view.dart
 │       └── widgets/
-│           ├── custom_bottom_nav_bar.dart   
-│           ├── machine_info.dart      
-│           ├── onboarding_next_button.dart      
-│           ├── onboarding_page.dart      
-│           ├── onboarding_skip_button.dart 
-│           ├── redeem_alert_dialog.dart   
-│           ├── reward_icon.dart      
-│           ├── reward_item_list.dart      
-│           ├── reward_item.dart      
-│           ├── rewards_bloc_builder.dart 
-│           └── total_points_container.dart 
+│           ├── custom_bottom_nav_bar.dart
+│           ├── machine_info.dart
+│           ├── onboarding_next_button.dart
+│           ├── onboarding_page.dart
+│           ├── onboarding_skip_button.dart
+│           ├── redeem_alert_dialog.dart
+│           ├── reward_icon.dart
+│           ├── reward_item_list.dart
+│           ├── reward_item.dart
+│           ├── rewards_bloc_builder.dart
+│           └── total_points_container.dart
 ├── drop_me.dart
 └── main.dart
 
 
 # Demo
-
-
-
-
-# 📸 Screenshots
-<img width="1080" height="2400" alt="Screenshot_1753894008" src="https://github.com/user-attachments/assets/fea06f5e-7661-4b50-9add-2bb3cb2c8066" />
 
 
 
