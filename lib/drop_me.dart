@@ -1,13 +1,16 @@
 import 'package:dropme/presentation/view/screens/onboarding_view.dart';
+import 'package:dropme/presentation/view/screens/qr_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 class DropMe extends StatelessWidget {
-  const DropMe({super.key});
-
+  const DropMe({super.key, required this.showOnboarding});
+  
+  final bool showOnboarding;
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       builder: (context, child) =>
             ResponsiveBreakpoints.builder(breakpoints: [
@@ -20,7 +23,7 @@ class DropMe extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white
       ),
       themeMode: ThemeMode.light,
-      home: OnboardingView(),
+      home: showOnboarding ? OnboardingView() : QrScreen(),
     );
   }
 }

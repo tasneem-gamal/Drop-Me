@@ -1,7 +1,9 @@
 import 'package:dropme/core/theming/colors.dart';
+import 'package:dropme/core/utils/shared_preference_helper.dart';
 import 'package:dropme/presentation/controllers/onboarding_controller.dart';
+import 'package:dropme/presentation/view/screens/qr_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
+import 'package:get/get.dart';
 
 class OnboardingNextButton extends StatefulWidget {
   const OnboardingNextButton({super.key});
@@ -31,7 +33,10 @@ class _OnboardingNextButtonState extends State<OnboardingNextButton> {
         return Align(
           alignment: Alignment.bottomRight,
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () async{
+              await SharedPreferenceHelper.setOnboardingSeen();
+              Get.offAll(() => QrScreen());
+            },
             style: ElevatedButton.styleFrom(
               backgroundColor: ColorsManager.mainColor,
               shape: RoundedRectangleBorder(
