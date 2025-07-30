@@ -10,9 +10,7 @@ class RewardsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: RewardsViewBody(),
-    );
+    return const Scaffold(body: RewardsViewBody());
   }
 }
 
@@ -25,9 +23,7 @@ class RewardsViewBody extends StatelessWidget {
       padding: Constants.appPadding,
       child: CustomScrollView(
         slivers: [
-          SliverToBoxAdapter(
-            child: TotalPointsContainer(),
-          ),
+          SliverToBoxAdapter(child: TotalPointsContainer()),
           SliverToBoxAdapter(child: verticalSpace(context, 24)),
           SliverToBoxAdapter(
             child: Text(
@@ -36,11 +32,9 @@ class RewardsViewBody extends StatelessWidget {
             ),
           ),
           SliverToBoxAdapter(child: verticalSpace(context, 16)),
-          RewardsBlocBuilder()
+          RewardsBlocBuilder(),
         ],
       ),
     );
   }
 }
-
-

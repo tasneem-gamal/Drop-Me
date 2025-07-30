@@ -12,8 +12,8 @@ class RewardIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60,
-      width: 60,
+      height: 40,
+      width: 40,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         color: ColorsManager.mainColor,

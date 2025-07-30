@@ -1,15 +1,12 @@
-import 'package:dropme/core/di/dependency_injection.dart';
 import 'package:dropme/core/theming/colors.dart';
 import 'package:dropme/core/theming/styles.dart';
 import 'package:dropme/core/utils/constants.dart';
 import 'package:dropme/core/utils/spacing.dart';
 import 'package:dropme/core/widgets/custom_app_button.dart';
-import 'package:dropme/presentation/controllers/rewards/rewards_cubit.dart';
 import 'package:dropme/presentation/view/screens/confirm_scan_view.dart';
 import 'package:dropme/presentation/view/screens/rewards_view.dart';
 import 'package:dropme/presentation/view/widgets/custom_bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 
 class QrView extends StatefulWidget {
@@ -24,25 +21,22 @@ class _QrViewState extends State<QrView> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => getIt<RewardsCubit>()..loadRewards(),
-      child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: ColorsManager.mainColor,
-          title: Text(
-            'Drop Me',
-            style: CustomTextStyles.font24WhiteMedium(context),
-          ),
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: ColorsManager.mainColor,
+        title: Text(
+          'Drop Me',
+          style: CustomTextStyles.font24WhiteMedium(context),
         ),
-        body: _selectedIndex == 0 ? QrViewBody() : RewardsView(),
-        bottomNavigationBar: CustomBottomNavBar(
-          selectedIndex: _selectedIndex,
-          onTap: (index) {
-            setState(() {
-              _selectedIndex = index;
-            });
-          },
-        ),
+      ),
+      body: _selectedIndex == 0 ? QrViewBody() : RewardsView(),
+      bottomNavigationBar: CustomBottomNavBar(
+        selectedIndex: _selectedIndex,
+        onTap: (index) {
+          setState(() {
+            _selectedIndex = index;
+          });
+        },
       ),
     );
   }
@@ -91,7 +85,9 @@ class _QrViewBodyState extends State<QrViewBody>
             ),
             verticalSpace(context, 32),
             _isLoading
-                ? const CircularProgressIndicator(color: ColorsManager.mainColor)
+                ? const CircularProgressIndicator(
+                  color: ColorsManager.mainColor,
+                )
                 : CustomAppButton(
                   btnText: 'Scan',
                   onPressed: _scanProcess,

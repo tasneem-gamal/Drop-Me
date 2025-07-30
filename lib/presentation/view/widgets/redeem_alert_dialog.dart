@@ -1,4 +1,4 @@
-import 'package:dropme/core/theming/colors.dart';
+
 import 'package:dropme/core/theming/styles.dart';
 import 'package:dropme/core/utils/extensions.dart';
 import 'package:dropme/core/utils/spacing.dart';
@@ -8,11 +8,13 @@ import 'package:flutter/material.dart';
 class RedeemAlertDialog extends StatelessWidget {
   final String rewardName;
   final int points;
+  final VoidCallback onConfirmed;
 
   const RedeemAlertDialog({
     super.key,
     required this.rewardName,
     required this.points,
+    required this.onConfirmed,
   });
 
   @override
@@ -26,13 +28,13 @@ class RedeemAlertDialog extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            CircleAvatar(
+            const CircleAvatar(
               radius: 30,
               backgroundColor: Color(0xFFE8F5E9),
               child: Icon(Icons.card_giftcard, size: 30, color: Colors.green),
             ),
             verticalSpace(context, 12),
-            Text(
+            const Text(
               'Confirm Redemption',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
@@ -48,18 +50,18 @@ class RedeemAlertDialog extends StatelessWidget {
               children: [
                 Expanded(
                   child: TextButton(
-                    onPressed: () => context.pop(), 
-                    child: Text('Cancel', style: TextStyle(color: ColorsManager.lightGray),)
+                    onPressed: () => context.pop(),
+                    child: const Text('Cancel', style: TextStyle(color: Colors.grey)),
                   ),
                 ),
-                verticalSpace(context, 16),
+                const SizedBox(width: 16),
                 Expanded(
                   child: CustomAppButton(
                     btnText: 'Confirm',
                     buttonHeight: 60,
                     buttonWidth: 50,
-                    onPressed: (){},
-                  )
+                    onPressed: onConfirmed,
+                  ),
                 ),
               ],
             ),
