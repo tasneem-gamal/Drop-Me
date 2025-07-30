@@ -1,3 +1,4 @@
+import 'package:dropme/core/theming/colors.dart';
 import 'package:dropme/presentation/controllers/onboarding_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
@@ -32,7 +33,7 @@ class _OnboardingNextButtonState extends State<OnboardingNextButton> {
           child: ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.blue,
+              backgroundColor: ColorsManager.mainColor,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30),
               ),
@@ -57,15 +58,15 @@ class _OnboardingNextButtonState extends State<OnboardingNextButton> {
                   child: CircularProgressIndicator(
                     value: progress,
                     strokeWidth: 4,
-                    backgroundColor: Colors.grey.shade200,
-                    valueColor: const AlwaysStoppedAnimation<Color>(Colors.blue),
+                    backgroundColor: ColorsManager.moreLightGray,
+                    valueColor: const AlwaysStoppedAnimation<Color>(ColorsManager.mainColor),
                   ),
                 ),
                 Container(
                   height: 60,
                   width: 60,
                   decoration: const BoxDecoration(
-                    color: Colors.blue,
+                    color: ColorsManager.mainColor,
                     shape: BoxShape.circle,
                   ),
                   child: const Icon(

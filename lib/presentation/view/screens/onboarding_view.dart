@@ -1,4 +1,3 @@
-import 'package:dropme/core/theming/colors.dart';
 import 'package:dropme/core/utils/constants.dart';
 import 'package:dropme/presentation/controllers/onboarding_controller.dart';
 import 'package:dropme/presentation/view/widgets/onboarding_next_button.dart';
@@ -13,7 +12,7 @@ class OnboardingView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: ColorsManager.mainColor,
+      backgroundColor: Colors.white,
       body: SafeArea(child: OnboardingViewBody()),
     );
   }

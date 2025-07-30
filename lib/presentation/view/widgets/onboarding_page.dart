@@ -19,7 +19,7 @@ class OnboardingPage extends StatelessWidget {
         Text(
           text,
           textAlign: TextAlign.center,
-          style: CustomTextStyles.font24WhiteMedium(context),
+          style: CustomTextStyles.font24BlackMedium(context),
         )
       ],
     );

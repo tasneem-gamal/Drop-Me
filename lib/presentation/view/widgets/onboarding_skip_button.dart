@@ -17,7 +17,7 @@ class OnboardingSkipButton extends StatelessWidget {
         }, 
         child: Text(
           'Skip',
-          style: CustomTextStyles.font14WhiteBold(context),
+          style: CustomTextStyles.font16MainColorMedium(context),
         )
       ),
     );
