@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ColorsManager{
   static const Color mainColor = Colors.green;
-  static const Color mainColorLight = Color.fromARGB(255, 187, 223, 146);
+  static const Color mainColorLight = Color.fromARGB(255, 229, 244, 213);
   static const Color blueShade = Color.fromARGB(255, 21, 43, 244);
   static const Color whiteShade = Color.fromARGB(255, 236, 234, 235);
   static const Color warningRed = Color(0xffB01E1E);

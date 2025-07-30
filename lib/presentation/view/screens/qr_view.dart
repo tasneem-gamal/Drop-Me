@@ -49,8 +49,7 @@ class QrViewBody extends StatefulWidget {
   State<QrViewBody> createState() => _QrViewBodyState();
 }
 
-class _QrViewBodyState extends State<QrViewBody>
-    with AutomaticKeepAliveClientMixin {
+class _QrViewBodyState extends State<QrViewBody> {
   bool _isLoading = false;
 
   void _scanProcess() async {
@@ -67,38 +66,53 @@ class _QrViewBodyState extends State<QrViewBody>
     Get.to(() => ConfirmScanView());
   }
 
+
+
   @override
   Widget build(BuildContext context) {
-    super.build(context);
     return Padding(
       padding: Constants.appPadding,
       child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Image.asset('assets/images/qr_code.jpg', gaplessPlayback: true),
-            verticalSpace(context, 16),
-            Text(
-              'Ready to scan our machine?',
-              style: CustomTextStyles.font24BlackMedium(context),
-            ),
-            verticalSpace(context, 32),
-            _isLoading
-                ? const CircularProgressIndicator(
-                  color: ColorsManager.mainColor,
-                )
-                : CustomAppButton(
-                  btnText: 'Scan',
-                  onPressed: _scanProcess,
-                  buttonWidth: MediaQuery.of(context).size.width * 0.5,
+        child: Container(
+          height: MediaQuery.of(context).size.height * 0.35,
+          padding: EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Icon(Icons.qr_code, size: 80, color: ColorsManager.mainColor,),
+              verticalSpace(context, 16),
+              Text(
+                'Ready to scan our machine?',
+                style: CustomTextStyles.font18MainColorMedium(context).copyWith(
+                  color: Colors.black
                 ),
-          ],
+              ),
+              Text(
+                'One scan away from unlocking rewards let’s go',
+                textAlign: TextAlign.center,
+                style: CustomTextStyles.font18WhiteMedium(context).copyWith(
+                  color: Colors.black
+                ),
+              ),
+              verticalSpace(context, 32),
+              _isLoading
+                  ? const CircularProgressIndicator(
+                    color: ColorsManager.mainColor,
+                  )
+                  : CustomAppButton(
+                    btnText: 'Scan',
+                    onPressed: _scanProcess,
+                    buttonWidth: MediaQuery.of(context).size.width * 0.5,
+                  ),
+            ],
+          ),
         ),
       ),
     );
   }
 
-  @override
-  bool get wantKeepAlive => true;
 }
