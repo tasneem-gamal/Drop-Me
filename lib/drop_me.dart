@@ -1,5 +1,5 @@
 import 'package:dropme/presentation/view/screens/onboarding_view.dart';
-import 'package:dropme/presentation/view/screens/qr_screen.dart';
+import 'package:dropme/presentation/view/screens/qr_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -23,7 +23,7 @@ class DropMe extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white
       ),
       themeMode: ThemeMode.light,
-      home: showOnboarding ? OnboardingView() : QrScreen(),
+      home: showOnboarding ? OnboardingView() : QrView(),
     );
   }
 }

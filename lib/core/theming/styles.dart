@@ -69,6 +69,32 @@ class CustomTextStyles {
         color: ColorsManager.mainColor
       );
 
+  static TextStyle font18MainColorMedium(BuildContext context) => TextStyle(
+        fontSize: ResponsiveValue<double>(
+          context,
+          defaultValue: 18.0,
+          conditionalValues: [
+            const Condition.smallerThan(name: MOBILE, value: 16.0),
+            const Condition.largerThan(name: TABLET, value: 22.0),
+          ],
+        ).value,
+        fontWeight: FontWeightHelper.medium,
+        color: ColorsManager.mainColor
+      );
+
+  static TextStyle font16BlackMedium(BuildContext context) => TextStyle(
+        fontSize: ResponsiveValue<double>(
+          context,
+          defaultValue: 16.0,
+          conditionalValues: [
+            const Condition.smallerThan(name: MOBILE, value: 14.0),
+            const Condition.largerThan(name: TABLET, value: 18.0),
+          ],
+        ).value,
+        fontWeight: FontWeightHelper.medium,
+        color: Colors.black
+      );
+
   static TextStyle font16LightGrayBold(BuildContext context) => TextStyle(
         fontSize: ResponsiveValue<double>(
           context,

@@ -14,7 +14,7 @@ class OnboardingPage extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Image.asset(image),
+        Image.asset(image, gaplessPlayback: true,),
         verticalSpace(context, 30),
         Text(
           text,

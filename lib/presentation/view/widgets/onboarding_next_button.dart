@@ -1,7 +1,7 @@
 import 'package:dropme/core/theming/colors.dart';
 import 'package:dropme/core/utils/shared_preference_helper.dart';
 import 'package:dropme/presentation/controllers/onboarding_controller.dart';
-import 'package:dropme/presentation/view/screens/qr_screen.dart';
+import 'package:dropme/presentation/view/screens/qr_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -35,7 +35,7 @@ class _OnboardingNextButtonState extends State<OnboardingNextButton> {
           child: ElevatedButton(
             onPressed: () async{
               await SharedPreferenceHelper.setOnboardingSeen();
-              Get.offAll(() => QrScreen());
+              Get.offAll(() => QrView());
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: ColorsManager.mainColor,
