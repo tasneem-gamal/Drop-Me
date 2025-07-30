@@ -57,14 +57,14 @@ lib/
 │           └── total_points_container.dart 
 ├── drop_me.dart
 └── main.dart
+
+
 # Demo
-![App Demo](https://github.com/user-attachments/assets/e897c888-2ff9-4a6d-bf9b-92ae4a333a9e)
+<video src="https://github.com/user-attachments/assets/71386cfd-fb4f-4c40-b3be-16ee285570de" controls width="100%"></video>
+
 
 
 # screenshots
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/5169a008-5ceb-4d52-a87b-dc78e2214592" alt="Screen 1" width="45%" />
-  <img src="https://github.com/user-attachments/assets/deeec03d-952a-4426-b0a3-b2f2c1d477d7" alt="Screen 2" width="45%" />
-</p>
+
 
 
